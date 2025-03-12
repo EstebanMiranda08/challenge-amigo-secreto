@@ -1,43 +1,32 @@
 // El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
 
-//Crear Arreglo
+//CREAR ARREGLO
 let amigos = [];
-let cantAmigos = 5;
 
+let cantAmigos = 5;
 let listaAmigos = document.getElementById("listaAmigos");
 let resultado = document.getElementById("resultado");
 
 //FUNCION PARA AGREGAR AMIGOS
 function agregarAmigo(){
-    //OBTENER TEXTO
     let nuevoAmigo = document.getElementById('amigo').value; 
     if(amigos.length === cantAmigos){
         alert("Haz superado la cantidad maxima de amigos permitida");
-    }else{ //VALIDAR ENTRADA DE TEXTO
+    }else{ 
         if(nuevoAmigo === ""){
             alert("Por favor ingresa un nombre");
         }
+        amigos.push(nuevoAmigo);
+        actualizarListaAmigo();
     }
     limpiarEntrada('amigo');
-    
-    // ACTUALIZA E INSERTA LOS NUEVOS AMIGOS
-    amigos.push(nuevoAmigo);
-    actualizarAmigo();
     return;
-}
-//-------------------------------------------------------------------------------
-
-// LIMPIAR CAMPO DE ENTRADA
-function limpiarEntrada(identificar){ 
-    document.getElementById(identificar).value = ""; 
-    document.getElementById(identificar).innerHTML = ""; 
 }
 
 //FUNCION PARA ACTUALIZAR LISTA DE AMIGOS
-function actualizarAmigo(){
+function actualizarListaAmigo(){
     
     let listaAmigos = document.getElementById('listaAmigos');
-    //LIMPIAR LA LISTA
     listaAmigos.innerHTML = "";
 
     for (let i = 0; i <amigos.length; i++){
@@ -48,12 +37,17 @@ function actualizarAmigo(){
     };
 }
 
-//--------------------------------------------------------
-//FUNCION SORTEO AMIGOS
+//FUNCION SORTEO DE AMIGOS
 function sortearAmigo(){
     const random = Math.floor(Math.random()*amigos.length);
     const amigoSecreto = amigos[random];
-    resultado.innerHTML = `<li>El amigo secreto sorteado es: ${amigoSecreto}</li>`;
-    limpiarEntrada();
+    resultado.innerHTML = `<li>El amigo secreto es: ${amigoSecreto}</li>`;
+    return;
+}
+
+// LIMPIAR CAMPO DE ENTRADA AMIGO
+function limpiarEntrada(identificar){ 
+    document.getElementById(identificar).value = ""; 
+    document.getElementById(identificar).innerHTML = ""; 
     return;
 }
