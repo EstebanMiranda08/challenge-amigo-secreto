@@ -19,6 +19,7 @@ El sorteo se muestra de forma clara y destacada en la página.
 - `Experiencia de usuario`:
 La página está diseñada para que los usuarios no tengan que navegar por menús o realizar acciones complejas. Se busca que todo el proceso, desde ingresar los nombres hasta conocer al ganador, sea rápido y sin distracciones.
 
+
 :wrench:<h1>Funcionalidad:</h1>
 - `Validaciones`:
 El campo de texto no puede estar vacío, de esta forma el usuario no puede añadir el nombre de un amigo sin ingresar texto.
@@ -28,6 +29,7 @@ Al presionar el botón "Añadir", la funcionalidad de la página activa un algor
 
 - `Sorteo limitado`:
 Existe un limite por defecto de 5 amigos, esto con la finalidad de que sea mas simple para el usuario y evitar confusiones por si existen amigos con el mismo nombre.
+
 
 :computer:<h1>Tecnologías utilizadas:</h1>
 - `JavaScript`
