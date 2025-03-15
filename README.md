@@ -1,4 +1,5 @@
 ![Challenge_1](https://github.com/user-attachments/assets/40ded9e1-296a-4d90-b169-17004c8156b5)
+<br></br>
 :clipboard:<h1>Descripción:</h1>
 <p>Este sitio web a sido desarrollado para los usuarios que requieran agregar los nombres de sus amigos y realizar un sorteo del amigo secreto. 
 Los nombres de los amigos son guardados y mediante un sorteo en el cual se activa mediante un botón, este muestra en pantalla el amigo secreto sortaeado.</p>
